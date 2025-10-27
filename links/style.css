@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	font-family: arial, noto-sans;
+}
+@keyframes bg-item {
+	from {
+		background: linear-gradient(45deg, black, gray 70%);
+	}
+	to {
+		background: linear-gradient(45deg, gray, black 70%);
+	}
+}
+:root {
+	--cor-verde: #6ee7b7;
+	--cor-azul: #99c6ff;
+}
+header {
+	display: flex;
+	justify-content: flex-end
+}
+
+nav {
+	position: sticky;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	padding: 12px;
+	gap: 5px;
+	background: linear-gradient(45deg, var(--cor-azul), var(--cor-verde));
+	border-bottom-left-radius: 12px;
+	padding-left: 20px;
+}
+
+a {
+	padding: 0;
+}
+
+img {
+	display: block;
+	width: 30px;
+	height: auto;
+}
+
+svg.feather {
+  width: 32px;
+  height: auto;
+  stroke-width: 2; /* controla a espessura das linhas */
+}
+
+main h1 {
+	text-align: center;
+	margin: 35px 0;
+}
+main {
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	align-items: center;
+}
+div.container {
+	display: flex;
+	flex-wrap: wrap;
+	/* permite quebrar linha */
+	justify-content: space-evenly;
+	gap: 20px;
+	margin: 0 10px;
+}
+
+.container .item {
+	background: linear-gradient(45deg, black, gray 70%);
+	padding: 30px;
+	border: 1px solid black;
+	border-top-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	color: white;
+	flex: 1 1 30px;
+	padding: 20px;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 
+	1.3em;
+	box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.411);
+	transition: 0.5s ease;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+.menu {
+  display: none; /* Esconde o menu por padrão */
+}
+
+.menu.active {
+  display: block; /* Mostra o menu quando estiver ativo */
+}
+
+/* Estilos opcionais para deixar mais bonito */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #222;
+}
+
+.menu li {
+  border-bottom: 1px solid #333;
+}
+
+.menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+.menu-toggle {
+  position: relative; /* Define um contexto de posicionamento pro menu */
+  z-index: 2; /* Mantém o botão sempre acima */
+}
+
+.menu {
+  position: absolute;
+  top: 100%; /* Fica logo abaixo do botão */
+  left: 0;
+  background: #222;
+  width: 150px; /* ou 100% se quiser ocupar toda a largura */
+  display: none;
+  z-index: 1; /* Fica abaixo do botão, mas acima do resto da página */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.menu.active {
+  display: block;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background: #333;
+}
